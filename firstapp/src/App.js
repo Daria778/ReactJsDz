@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Message from './Message';
+import Counter from './Counter';
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h2>
-          <Message text={"React is cool, but hard, maybe, maybe not"} />
+          <Counter />
         </h2>
         <a
           className="App-link"
