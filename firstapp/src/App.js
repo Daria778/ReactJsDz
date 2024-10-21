@@ -7,7 +7,7 @@ import Profile from "./5Seminar/Profile";
 import Product from "./6Seminar/Product";
 import ProductList from "./6Seminar/ProductList";
 import { useEffect } from "react";
-import MidleWarecomp from "./7Seminar/MidleWareComp";
+import MidleWarecomp from "./7Seminar/Try/MidleWareComp";
 
 
 function App() {
