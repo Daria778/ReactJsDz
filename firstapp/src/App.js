@@ -1,7 +1,7 @@
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom"
 import Home from "./4seminar/Home";
 import About from "./4seminar/About";
-import { Provider, useDispatch } from "react-redux";
+import { Provider, useDispatch, useSelector } from "react-redux";
 import { store } from "./5Seminar/store";
 import Profile from "./5Seminar/Profile";
 import Product from "./6Seminar/Product";
@@ -11,7 +11,9 @@ import MidleWarecomp from "./7Seminar/MidleWareComp";
 
 
 function App() {
-
+  const dispatch = useDispatch();
+  const tasks = useSelector((state) => state.tasks.entities);
+  const loading = useSelector((state) => state.tasks.loading);
   return (
     // <BrowserRouter>
     //   <Link to="/">Home</Link >
@@ -23,9 +25,19 @@ function App() {
 
     // </BrowserRouter>
 
-    <Provider store={store}>
-      <MidleWarecomp />
-    </Provider>
+    <div>
+      <h1>Список задач</h1>
+      {loading ? (
+        <p>Загрузка...</p>
+      ) : (
+        <ul>
+          {tasks.map((task) => (
+            <li key={task.id}>{task.title}</li>
+          ))}
+        </ul>
+      )}
+    </div>
+
   );
 }
 

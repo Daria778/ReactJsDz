@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { tasks } from "./data";
 
 export const fetchTasks = createAsyncThunk("tasks/fetchTasks", async () => {
     return new Promise((resolve) =>
@@ -22,5 +23,4 @@ const tasksSlice = createSlice({
         });
     },
 });
-
 export default tasksSlice.reducer;
