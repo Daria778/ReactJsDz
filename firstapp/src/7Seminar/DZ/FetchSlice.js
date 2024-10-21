@@ -3,11 +3,10 @@ import { tasks } from "./data";
 
 export const fetchTasks = createAsyncThunk("tasks/fetchTasks", async () => {
     return new Promise((resolve) =>
-        setTimeout(() => resolve({ data: tasks }), 1000)
+        setTimeout(() => resolve({ data: tasks }), 5000)
     );
 });
 const tasksSlice = createSlice({
-
     name: "tasks",
     initialState: {
         entities: [],

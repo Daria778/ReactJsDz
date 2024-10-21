@@ -11,8 +11,8 @@ import MidleWarecomp from "./7Seminar/Try/MidleWareComp";
 
 
 function App() {
-  const dispatch = useDispatch();
-  const tasks = useSelector((state) => state.tasks.entities);
+
+  const tasks = useSelector((state) => state.task.entities);
   const loading = useSelector((state) => state.tasks.loading);
   return (
     // <BrowserRouter>

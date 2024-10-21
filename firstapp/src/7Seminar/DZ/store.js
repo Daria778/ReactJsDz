@@ -1,5 +1,5 @@
 import { applyMiddleware, configureStore } from "@reduxjs/toolkit"
-import { tasksSlice } from "./Slice.js"
+import { tasksSlice } from "./FetchSlice.js"
 
 
 
